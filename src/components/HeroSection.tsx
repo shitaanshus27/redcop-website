@@ -27,7 +27,7 @@ export default function HeroSection() {
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-redcop-dark to-black"
+      className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-redcop-dark to-black pt-20 md:pt-0"
     >
       {/* Dynamic background */}
       <div className="absolute inset-0">
@@ -221,12 +221,12 @@ export default function HeroSection() {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - only show on desktop */}
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center hidden md:flex"
       >
         <span className="text-white/60 text-sm mb-2">Scroll to explore</span>
         <motion.div
